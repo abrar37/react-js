@@ -5,15 +5,22 @@ import './App.css'
 
 function App() {
 
-  let [counter, setCounter] = useState(15)
+  const [counter, setCounter] = useState(10)
 
   // let counter = 15;
 
   const addValue = () => {
 
+
+
     if (counter < 20) {
-      counter = counter + 1
-      setCounter(counter)
+      // setCounter(counter + 1)
+
+// setCounter retunr arrow function
+      setCounter(prevCounter => prevCounter + 1)
+      setCounter(prevCounter => prevCounter + 1)
+      setCounter(prevCounter => prevCounter + 1)
+      setCounter(prevCounter => prevCounter + 1)
     }
 
     // counter = counter + 1
