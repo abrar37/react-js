@@ -10,13 +10,11 @@ function App() {
   // let counter = 15;
 
   const addValue = () => {
-
-
-
+    
     if (counter < 20) {
       // setCounter(counter + 1)
 
-// setCounter retunr arrow function
+      // setCounter retun arrow function
       setCounter(prevCounter => prevCounter + 1)
       setCounter(prevCounter => prevCounter + 1)
       setCounter(prevCounter => prevCounter + 1)
