@@ -25,19 +25,20 @@ function App() {
 
     setPassword(pass)
 
-  }, [length, numAllowed, charAllowed, setPassword])
+  }, [length, numAllowed, charAllowed, setPassword]);
 
   useEffect(() => {
     passwordGenrator()
-  }, [length, numAllowed, charAllowed, passwordGenrator])
+  }, [length, numAllowed, charAllowed, passwordGenrator]);
 
 
-  const passwordRef = useRef(null)
-  const copyPassword = ()=>{
+  const passwordRef = useRef(null);
+
+  const copyPassword = () => {
     passwordRef.current?.select()
     // passwordRef.current?.setSelectionRange(2, 7)
     window.navigator.clipboard.writeText(password)
-  }
+  };
 
 
 
