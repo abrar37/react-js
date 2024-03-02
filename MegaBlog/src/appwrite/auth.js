@@ -1,5 +1,5 @@
-import conf from '../conf/conf.js';
-import { Client, Account, ID } from "appwrite";
+import conf from '../conf/conf';
+import { Client, Account, ID } from 'appwrite';
 
 
 export class AuthService {
@@ -9,7 +9,7 @@ export class AuthService {
     constructor(){
         this.client
             .setEndpoint(conf.appwriteUrl)
-            .setProject(conf.appwriteProjectId);
+            .setProject(conf.appwriteProjectId)
         this.account = new Account(this.client);
     }
 
@@ -39,7 +39,7 @@ export class AuthService {
         try {
             return await this.account.get();
         } catch (error) {
-            throw error;
+            console.log("Appwrite serive :: getCurrentUser :: error", error);
         }
     }
 

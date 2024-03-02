@@ -5,6 +5,7 @@ import authService from './appwrite/auth'
 import { useEffect } from 'react'
 import {login, logout} from './store/authSlice'
 import {Header, Footer} from './components/index'
+import { Outlet } from 'react-router-dom'
 
 function App() {
   const [loading, setLoading] = useState(false)
@@ -27,7 +28,7 @@ function App() {
       <div className="w-full block">
         <Header />
         <main>
-          TODO: {/* <Outlet /> */}
+          TODO: <Outlet />
         </main>
         <Footer />
       </div>
