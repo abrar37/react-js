@@ -1,19 +1,18 @@
 import { useState } from 'react'
 import InputBox from './components/InputBox'
 import useCurrencyInfo from './hooks/useCurrencyInfo'
-// import './App.css'
 
 function App() {
   const [amount, setAmount] = useState(0)
-  const [from, setFrom] = useState("usd")
-  const [to, setTo] = useState("pkr")
+  const [from, setFrom] = useState("USD")
+  const [to, setTo] = useState("PKR")
   const [convertedAmount, setConvertedAmount] = useState(0)
 
   const currencyInfo = useCurrencyInfo(from)
   const options = Object.keys(currencyInfo)
 
   const swap = () => {
-    setFrom(to)
+    setFrom(to) 
     setTo(from)
     setConvertedAmount(amount)
     setAmount(convertedAmount)
@@ -28,7 +27,7 @@ function App() {
     <>
       <div className="w-full h-screen flex flex-wrap justify-center items-center bg-cover bg-no-repeat"
         style={{
-          backgroundImage: `url('https://source.unsplash.com/1260x750/?currency,background')`,
+          backgroundImage: `url('/src/assets/app-bg.jpg')`,
         }}
       >
         <div className="w-full">
@@ -69,10 +68,11 @@ function App() {
                   onCurrencyChange={(currency) => setTo(currency)}
                   selectCurrency={to}
                   amountDisable
+                  dafaultCurrency = "PKR"
                 />
               </div>
               <button type="submit" className="w-full bg-blue-600 text-white px-4 py-3 rounded-lg">
-                Convert {from.toUpperCase()} to {to.toUpperCase()}
+                Convert {from} to {to}
               </button>
             </form>
           </div>
