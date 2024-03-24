@@ -26,18 +26,17 @@ function App() {
   
   return (
     <ThemeProvider value={{themeMode, darkTheme, lightTheme}}>
-      <div className="flex flex-wrap min-h-screen items-center">
-          <div className="w-full">
-              <div className="w-full max-w-sm mx-auto flex justify-end mb-4">
-                <ThemeBtn />
-              </div>
+        <div className="flex flex-wrap min-h-screen items-center justify-center">
+            <div>
+                <div className="w-full mx-auto flex justify-end mb-4">
+                  <ThemeBtn />
+                </div>
 
-              <div className="w-full max-w-sm mx-auto">
-                <Card />
-              </div>
-          </div>
-      </div>
-
+                <div className="w-full mx-auto">
+                  <Card />
+                </div>
+            </div>
+        </div>
     </ThemeProvider>
     
   )
